@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Réservation | GREAT SHAPE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">G</span>
+            <span>GREAT <strong>SHAPE</strong></span>
+        </a>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+        <nav class="navigation" id="navigation">
+
+            <a href="index.html">Accueil</a>
+
+            <a href="services.html">
+                Nos coupes
+            </a>
+
+            <a href="reservation.html" class="active">
+                Réservation
+            </a>
+
+            <a href="about.html">
+                À propos
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <span class="small-title">
+                RENDEZ-VOUS
+            </span>
+
+            <h1>
+                Réservez votre coupe
+            </h1>
+
+            <p>
+                Remplissez le formulaire et envoyez votre
+                demande directement sur WhatsApp.
+            </p>
+
+        </section>
+
+
+        <section class="reservation-section">
+
+            <div class="reservation-info">
+
+                <span class="small-title">
+                    GREAT SHAPE
+                </span>
+
+                <h2>
+                    Une coupe professionnelle,
+                    directement chez vous.
+                </h2>
+
+                <p>
+                    Choisissez votre prestation, indiquez
+                    votre adresse et votre disponibilité.
+                </p>
+
+                <div class="info-item">
+                    <span>✓</span>
+                    Coiffure homme à domicile
+                </div>
+
+                <div class="info-item">
+                    <span>✓</span>
+                    Enfants à partir de 1 000 FCFA
+                </div>
+
+                <div class="info-item">
+                    <span>✓</span>
+                    Adultes à partir de 2 000 FCFA
+                </div>
+
+                <div class="info-item">
+                    <span>✓</span>
+                    Familles jusqu'à 5 000 FCFA
+                </div>
+
+            </div>
+
+
+            <!-- FORMULAIRE -->
+
+            <form id="reservationForm"
+                  class="reservation-form">
+
+                <label for="name">
+                    Votre nom
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Ex : Jean"
+                    required
+                >
+
+
+                <label for="phone">
+                    Votre numéro
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Ex : 680000000"
+                    required
+                >
+
+
+                <label for="address">
+                    Adresse
+                </label>
+
+                <input
+                    type="text"
+                    id="address"
+                    placeholder="Votre quartier / adresse"
+                    required
+                >
+
+
+                <label for="service">
+                    Type de prestation
+                </label>
+
+                <select id="service" required>
+
+                    <option value="">
+                        Sélectionnez une prestation
+                    </option>
+
+                    <option value="Coupe enfant - 1000 FCFA">
+                        Enfant - 1 000 FCFA
+                    </option>
+
+                    <option value="Coupe adulte - 2000 FCFA">
+                        Adulte - 2 000 FCFA
+                    </option>
+
+                    <option value="Coupe famille - jusqu'à 5000 FCFA">
+                        Famille - jusqu'à 5 000 FCFA
+                    </option>
+
+                </select>
+
+
+                <label for="date">
+                    Date souhaitée
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+
+                <label for="time">
+                    Heure souhaitée
+                </label>
+
+                <input
+                    type="time"
+                    id="time"
+                    required
+                >
+
+
+                <label for="message">
+                    Message supplémentaire
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Informations supplémentaires..."
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary full-button"
+                >
+                    💬 Réserver sur WhatsApp
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            GREAT <span>SHAPE</span>
+        </div>
+
+        <p>
+            Coiffure homme à domicile.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Nos coupes</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="about.html">À propos</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 GREAT SHAPE. Tous droits réservés.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

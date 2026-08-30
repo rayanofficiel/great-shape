@@ -1,0 +1,1297 @@
+/* =====================================================
+   GREAT SHAPE
+   COIFFURE HOMME À DOMICILE
+   ===================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #070a0f;
+
+    color: #ffffff;
+
+    line-height: 1.6;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+
+    --black: #070a0f;
+
+    --dark: #0d1118;
+
+    --card: #111722;
+
+    --blue: #1677ff;
+
+    --blue-light: #4ba3ff;
+
+    --white: #ffffff;
+
+    --gray: #aab2bf;
+
+    --border: #222b38;
+
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    min-height: 75px;
+
+    padding: 15px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(7, 10, 15, 0.95);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.logo strong {
+
+    color: var(--blue-light);
+}
+
+
+.logo-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+    box-shadow: 0 0 20px rgba(22, 119, 255, 0.35);
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.navigation a {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover,
+.navigation a.active {
+
+    color: var(--white);
+}
+
+
+.navigation a.active {
+
+    color: var(--blue-light);
+}
+
+
+/* MOBILE MENU */
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(22, 119, 255, 0.20),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(22, 119, 255, 0.10),
+            transparent 30%
+        );
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(75, 163, 255, 0.15);
+
+    right: -150px;
+
+    top: 100px;
+}
+
+
+.hero-content {
+
+    max-width: 750px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.hero-tag,
+.small-title {
+
+    display: inline-block;
+
+    color: var(--blue-light);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(48px, 8vw, 90px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+
+    color: var(--blue-light);
+}
+
+
+.hero p {
+
+    max-width: 570px;
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    border: none;
+}
+
+
+.btn-primary {
+
+    background: var(--blue);
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(22, 119, 255, 0.25);
+}
+
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    background: #308aff;
+}
+
+
+.btn-secondary {
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid var(--border);
+}
+
+
+.btn-secondary:hover {
+
+    border-color: var(--blue);
+
+    color: var(--blue-light);
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    padding: 100px 8%;
+}
+
+
+.section-heading {
+
+    max-width: 650px;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+.section-heading p {
+
+    color: var(--gray);
+}
+
+
+/* ================= FEATURE CARDS ================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature-card {
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--blue);
+}
+
+
+.feature-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+
+    color: var(--gray);
+
+    margin-bottom: 20px;
+}
+
+
+.feature-card strong {
+
+    color: var(--blue-light);
+
+    font-size: 14px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta-section {
+
+    margin: 40px 6% 100px;
+
+    padding: 70px;
+
+    border-radius: 20px;
+
+    background:
+
+        radial-gradient(
+            circle at right,
+            rgba(22, 119, 255, 0.25),
+            transparent 45%
+        ),
+
+        var(--card);
+
+    border: 1px solid var(--border);
+}
+
+
+.cta-section h2 {
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+.cta-section p {
+
+    max-width: 550px;
+
+    color: var(--gray);
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+
+    text-align: center;
+
+    padding: 90px 6% 60px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(22, 119, 255, 0.12),
+            transparent 55%
+        );
+}
+
+
+.page-header h1 {
+
+    font-size: clamp(40px, 7vw, 70px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.page-header p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    color: var(--gray);
+}
+
+
+/* ================= CATALOGUE ================= */
+
+.catalogue {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px 6% 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* HAIRCUT CARD */
+
+.haircut-card {
+
+    overflow: hidden;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+
+.haircut-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--blue);
+}
+
+
+/* GRANDE IMAGE */
+
+.haircut-image {
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.haircut-card:hover .haircut-image {
+
+    transform: scale(1.03);
+}
+
+
+/* TEXTE SOUS IMAGE */
+
+.haircut-content {
+
+    padding: 25px;
+}
+
+
+.haircut-number {
+
+    color: var(--blue-light);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.haircut-content h2 {
+
+    font-size: 27px;
+
+    margin: 8px 0;
+}
+
+
+.haircut-content p {
+
+    color: var(--gray);
+
+    margin-bottom: 18px;
+}
+
+
+.price {
+
+    color: var(--blue-light);
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+.card-button {
+
+    display: inline-flex;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    background: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ================= RESERVATION ================= */
+
+.reservation-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 6% 100px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+.reservation-info h2 {
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.reservation-info > p {
+
+    color: var(--gray);
+
+    margin-bottom: 30px;
+}
+
+
+.info-item {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin: 15px 0;
+
+    color: #dce2ea;
+}
+
+
+.info-item span {
+
+    color: var(--blue-light);
+
+    font-weight: 900;
+}
+
+
+/* FORM */
+
+.reservation-form {
+
+    padding: 30px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+}
+
+
+.reservation-form label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #dce2ea;
+}
+
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #0a0e14;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: inherit;
+}
+
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+
+    border-color: var(--blue);
+}
+
+
+.full-button {
+
+    width: 100%;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 6% 100px;
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about-logo {
+
+    width: 280px;
+
+    height: 280px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            var(--blue),
+            #0b3b86
+        );
+
+    box-shadow:
+        0 0 60px rgba(22, 119, 255, 0.25);
+}
+
+
+.about-logo span {
+
+    font-size: 130px;
+
+    font-weight: 900;
+}
+
+
+.about-content h2 {
+
+    font-size: 45px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.about-content p {
+
+    color: var(--gray);
+
+    margin-bottom: 20px;
+}
+
+
+.values {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.values div {
+
+    padding: 18px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.values strong {
+
+    display: block;
+
+    color: var(--blue-light);
+
+    margin-bottom: 5px;
+}
+
+
+.values span {
+
+    font-size: 13px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 6% 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.contact-card {
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+}
+
+
+.contact-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-card h2 {
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card p {
+
+    color: var(--gray);
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    padding: 50px 6% 30px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+
+    background: #05070a;
+}
+
+
+.footer-logo {
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-logo span {
+
+    color: var(--blue-light);
+}
+
+
+.footer > p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin: 25px 0;
+}
+
+
+.footer-links a {
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+.footer-links a:hover {
+
+    color: var(--blue-light);
+}
+
+
+.copyright {
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVE SMARTPHONE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+
+    /* HEADER */
+
+    .header {
+
+        padding: 13px 20px;
+    }
+
+
+    .menu-button {
+
+        display: block;
+    }
+
+
+    .navigation {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #080b10;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .navigation.show {
+
+        display: flex;
+    }
+
+
+    .navigation a {
+
+        padding: 16px 25px;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 80vh;
+
+        padding: 70px 20px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 52px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .btn {
+
+        width: 100%;
+    }
+
+
+    /* SECTION */
+
+    .section {
+
+        padding: 70px 20px;
+    }
+
+
+    /* FEATURES */
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+
+        margin: 20px;
+
+        padding: 40px 25px;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+
+        padding: 70px 20px 40px;
+    }
+
+
+    /* CATALOGUE */
+
+    .catalogue {
+
+        grid-template-columns: 1fr;
+
+        padding: 10px 20px 70px;
+    }
+
+
+    /* GRANDE IMAGE */
+
+    .haircut-image {
+
+        height: 320px;
+    }
+
+
+    /* RESERVATION */
+
+    .reservation-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 20px 20px 70px;
+    }
+
+
+    .reservation-info h2 {
+
+        font-size: 36px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 20px 20px 70px;
+
+        gap: 40px;
+    }
+
+
+    .about-logo {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .about-logo span {
+
+        font-size: 100px;
+    }
+
+
+    .about-content h2 {
+
+        font-size: 36px;
+    }
+
+
+    .values {
+
+        flex-direction: column;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 20px 20px 70px;
+    }
+
+}
+
+
+/* PETITS TELEPHONES */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 43px;
+    }
+
+
+    .haircut-image {
+
+        height: 280px;
+    }
+
+
+    .haircut-content h2 {
+
+        font-size: 24px;
+    }
+
+}
